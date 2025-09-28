@@ -11,7 +11,7 @@ class Tfctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.1/tfctlgo_0.8.1_darwin_x86_64.tar.gz"
-      sha256 "6ac11bf124afe2c02edd00c6ee3103380103f734fecee3aa0e094b7d833bf151"
+      sha256 "7c4c49e73ff4f0f30f1a15cf6f9c8e3b332e0d049b384bf568333b138c07f500"
 
       def install
         bin.install "tfctl"
@@ -21,7 +21,7 @@ class Tfctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.1/tfctlgo_0.8.1_darwin_arm64.tar.gz"
-      sha256 "fefa58a3afb0ac829ace6e83f16660a92757dc923433e75b61265b24883577cc"
+      sha256 "70a64d463ca94cda3e96a80bfe853d13b5a7df8865251748df78e689b886806e"
 
       def install
         bin.install "tfctl"
@@ -34,7 +34,7 @@ class Tfctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.1/tfctlgo_0.8.1_linux_x86_64.tar.gz"
-      sha256 "b61b8e1e9efdf4602038acba37a591d5efdfc2b3eee90d78bfaca11c259bd7c4"
+      sha256 "d1c9e1b1f4ef9bd84876f9c4a2414722dea3924c6a3467a302f8e37e0515957c"
       def install
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
@@ -43,7 +43,7 @@ class Tfctl < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.1/tfctlgo_0.8.1_linux_arm64.tar.gz"
-      sha256 "78441faaead8a524b2fa9389773c6e8d8e5ad38c1f13eaea5c243c65fb2de732"
+      sha256 "432a47e4f419d85339c13a6b1f15ccaac0325633d971a53c8a2a33b027a722e9"
       def install
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
