@@ -5,13 +5,13 @@
 class Tfctl < Formula
   desc "CLI to query Terraform/OpenTofu state across backends"
   homepage "https://github.com/staranto/tfctlgo"
-  version "0.8.8"
+  version "0.8.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.8/tfctlgo_0.8.8_darwin_x86_64.tar.gz"
-      sha256 "5223f2fcb7835c5d1861fb7c71d632b66066de8c0a531619c506b01bc4e9b29d"
+      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.9/tfctlgo_0.8.9_darwin_x86_64.tar.gz"
+      sha256 "c3a6e492f7199825566fc535d1ef16cfbd817bda76c5e3ad25a5ee00525d991d"
 
       def install
         bin.install "tfctl"
@@ -20,8 +20,8 @@ class Tfctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.8/tfctlgo_0.8.8_darwin_arm64.tar.gz"
-      sha256 "7512548b42401f5efe6fcb84c100a6384b8c379877e799a46e9af5e2bd6b9400"
+      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.9/tfctlgo_0.8.9_darwin_arm64.tar.gz"
+      sha256 "0f9ca7168af2b47f625c8bdcf0130b9c8206b4199b52ca1a14729ec633bbbfd0"
 
       def install
         bin.install "tfctl"
@@ -33,8 +33,8 @@ class Tfctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.8/tfctlgo_0.8.8_linux_x86_64.tar.gz"
-      sha256 "dcc749a7c62829a125aea1c01f5bfdb9fe7e23a39ccb15dc96ff179ba7910481"
+      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.9/tfctlgo_0.8.9_linux_x86_64.tar.gz"
+      sha256 "aa2fd35e1cb394ff5b9f1c756864ba5a32617704bd862f958e2c71e849e6a495"
       def install
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
@@ -42,8 +42,8 @@ class Tfctl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.8/tfctlgo_0.8.8_linux_arm64.tar.gz"
-      sha256 "a97cca9bb2c2dbd7de359cd0553a3e3adea6126282cd4c162acfbb9311441df2"
+      url "https://github.com/staranto/homebrew-tfctlgo/releases/download/0.8.9/tfctlgo_0.8.9_linux_arm64.tar.gz"
+      sha256 "3b95ab3ce65c9549f66c29b5e45eb9b46b73e37463eb23a9f3aa85d0cd2ed32f"
       def install
         bin.install "tfctl"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
